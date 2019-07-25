@@ -216,7 +216,7 @@ function GM:Initialize()
 	-- Fonts we will need later
 	surface.CreateFont( "roboto16", { size = 16, weight = 400, antialias = true, additive = false, font = "Roboto" } )
 	surface.CreateFont( "roboto16Bold", { size = 16, weight = 700, antialias = true, additive = false, font = "Roboto Bold" } )
-	surface.CreateFont( "orbitron32Bold", { size = 32, weight = 700, antialias = true, additive = false, font = "Orbitron Bold" } )
+	surface.CreateFont( "orbitron32Bold", { size = 32, weight = 400, antialias = true, additive = false, font = "orbitronbold" } )
 
 	-- Language
 	language.Add( "worldspawn", "World" )

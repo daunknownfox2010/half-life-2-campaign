@@ -1,6 +1,3 @@
--- Send the required resources to the client
-resource.AddWorkshop( "283549412" )
-
 -- Send the required lua files to the client
 AddCSLuaFile( "cl_calcview.lua" )
 AddCSLuaFile( "cl_init.lua" )
@@ -590,7 +587,7 @@ function GM:NextMap()
 	timer.Simple( NEXT_MAP_TIME, function() self:GrabAndSwitch() end )
 
 end
-concommand.Add( "hl2c_next_map", function( ply ) if ( IsValid( ply ) && ply:IsAdmin() ) then hook.Call( "NextMap", GAMEMODE ); end end )
+concommand.Add( "hl2c_next_map", function( ply ) if ( IsValid( ply ) && ply:IsAdmin() ) then NEXT_MAP_TIME = 0; hook.Call( "NextMap", GAMEMODE ); end end )
 
 
 -- Called when an NPC dies
@@ -1073,7 +1070,7 @@ function GM:RestartMap()
 	timer.Simple( RESTART_MAP_TIME, function() game.ConsoleCommand( "changelevel "..game.GetMap().."\n" ) end )
 
 end
-concommand.Add( "hl2c_restart_map", function( ply ) if ( IsValid( ply ) && ply:IsAdmin() ) then hook.Call( "RestartMap", GAMEMODE ); end end )
+concommand.Add( "hl2c_restart_map", function( ply ) if ( IsValid( ply ) && ply:IsAdmin() ) then RESTART_MAP_TIME = 0; hook.Call( "RestartMap", GAMEMODE ); end end )
 
 
 -- Called every time a player does damage to an npc

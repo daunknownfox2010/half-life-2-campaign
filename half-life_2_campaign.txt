@@ -3,6 +3,7 @@
 	"title"			"Half-Life 2 Campaign"
 	"base"			"base"
 	"menusystem"	"1"
+	"workshopid"	"283549412"
 
 	"settings"
 	{
